@@ -1,0 +1,7 @@
+<ul>
+{{#each cat in model}}
+  <li style="list-style: none; display: inline-block; padding-right: 10px">
+    {{cat-component cat=cat canEdit=canEdit edit='edit' cancel='stopEditing' save='stopEditing'}}
+  </li>
+{{/each}}
+</ul>

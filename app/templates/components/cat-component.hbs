@@ -1,0 +1,13 @@
+{{#link-to 'cat' cat}}
+  <img {{bind-attr src=cat.image}} style="height: 100px; width: 80px;"><br>
+{{/link-to}}
+{{#if isEditing}}
+  {{input value=cat.name}}
+  <button {{action 'save' cat}}>Save</button>
+  <a href="#" {{action 'cancel'}}>Cancel</a>
+{{else}}
+  {{cat.name}}
+  <button {{bind-attr disabled=disableEdit}}{{action 'edit'}}>Edit</button>
+{{/if}}
+<br>
+<button {{action 'delete' cat}}>Delete</button>
